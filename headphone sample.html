@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macklor | Premium Over-Ear Headphones</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        },
+                        dark: {
+                            950: '#050505',
+                            900: '#121212',
+                            800: '#1e1e1e',
+                            700: '#2d2d2d',
+                        }
+                    },
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #050505; }
+        ::-webkit-scrollbar-thumb { background: #2d2d2d; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #0ea5e9; }
+        
+        /* Smooth SPA transition classes */
+        .view-transition {
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+        .view-hidden {
+            opacity: 0;
+            pointer-events: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            visibility: hidden;
+            transform: translateY(20px) scale(0.98);
+        }
+        .view-visible {
+            opacity: 1;
+            pointer-events: auto;
+            position: relative;
+            visibility: visible;
+            transform: translateY(0) scale(1);
+        }
+        
+        /* FAQ Accordion */
+        details > summary::-webkit-details-marker { display: none; }
+    </style>
+</head>
+<body class="bg-dark-950 text-gray-300 font-sans antialiased overflow-x-hidden selection:bg-brand-500 selection:text-white">
+
+    <header class="fixed w-full top-0 z-50 bg-dark-950/80 backdrop-blur-xl border-b border-white/5 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center cursor-pointer group" onclick="navigateTo('home')">
+                    <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-brand-600 to-brand-500 mr-3 flex items-center justify-center transform group-hover:rotate-12 transition-transform">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path></svg>
+                    </div>
+                    <span class="font-display font-bold text-2xl text-white tracking-wide">Macklor</span>
+                </div>
+                <nav class="hidden md:flex space-x-8" id="nav-links">
+                    <a href="#features" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Features</a>
+                    <a href="#specs" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Specs</a>
+                    <a href="#gallery" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Gallery</a>
+                </nav>
+                <div class="flex" id="nav-cta">
+                    <button onclick="navigateTo('signup')" class="rounded-full bg-white text-dark-950 hover:bg-gray-200 px-6 py-2.5 text-sm font-bold transition-all transform hover:scale-105 shadow-[0_0_15px_rgba(255,255,255,0.1)]">
+                        Join Waitlist
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="relative w-full overflow-hidden pt-20 min-h-screen">
+        
+        <!-- ========================================== -->
+        <!-- VIEW 1: MAIN LANDING PAGE                  -->
+        <!-- ========================================== -->
+        <div id="view-home" class="view-transition view-visible w-full">
+            
+            <!-- Hero Section -->
+            <section class="relative min-h-[90vh] flex items-center overflow-hidden">
+                <!-- Ambient Background Glows -->
+                <div class="absolute top-1/4 -left-20 w-96 h-96 bg-brand-600/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob"></div>
+                <div class="absolute top-1/3 -right-20 w-96 h-96 bg-brand-900/40 rounded-full mix-blend-screen filter blur-[100px] animate-blob animation-delay-2000"></div>
+                
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative w-full py-20">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div data-aos="fade-right" data-aos-duration="1000">
+                            <div class="inline-flex items-center px-3 py-1 rounded-full border border-brand-500/30 bg-brand-500/10 text-brand-500 text-xs font-semibold tracking-widest uppercase mb-6">
+                                <span class="w-2 h-2 rounded-full bg-brand-500 mr-2 animate-pulse"></span>
+                                Defining the new standard
+                            </div>
+                            <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-tight mb-6">
+                                Pure sound. <br />
+                                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-white">
+                                    Zero compromise.
+                                </span>
+                            </h1>
+                            <p class="text-lg text-gray-400 mb-8 max-w-lg leading-relaxed">
+                                Introducing the Macklor M1. Impeccably tuned, impossibly comfortable, and designed for those who demand acoustic perfection. 
+                            </p>
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <button onclick="navigateTo('signup')" class="inline-flex justify-center items-center px-8 py-4 rounded-full bg-white text-dark-950 font-bold text-lg hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] transition-all transform hover:-translate-y-1">
+                                    Reserve Yours
+                                </button>
+                                <div class="flex items-center gap-4 px-4 py-2 border border-white/10 rounded-full bg-dark-900/50 backdrop-blur-sm">
+                                    <span class="text-2xl font-bold text-white">$299</span>
+                                    <span class="text-xs text-gray-500 uppercase tracking-wider font-semibold">Pre-order Price</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Hero Image container -->
+                        <div class="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border border-white/5" data-aos="fade-left" data-aos-duration="1200">
+                            <img src="https://www.sony.hu/image/6145c1d32e6ac8e63a46c912dc33c5bb?fmt=pjpeg&bgcolor=FFFFFF&bgc=FFFFFF&wid=2515&hei=1320" alt="Macklor Headphones" class="w-full h-full object-cover hover:scale-105 transition-transform duration-[2s]">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Showcase (Alternating Layout) -->
+            <section id="features" class="py-24 bg-dark-900 relative">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-32">
+                    
+                    <div class="text-center mb-16" data-aos="fade-up">
+                        <h2 class="font-display text-4xl md:text-5xl font-bold text-white mb-4">Engineered for Obsessives</h2>
+                        <p class="text-gray-400 max-w-2xl mx-auto text-lg">Every frequency calibrated. Every millimeter sculpted.</p>
+                    </div>
+
+                    <!-- Feature 1: Image Left, Text Right -->
+                    <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                        <div class="w-full lg:w-1/2 relative aspect-square md:aspect-video lg:aspect-square rounded-3xl overflow-hidden border border-white/5" data-aos="fade-right">
+                            <img src="https://www.sonylatvija.com/image/ff2835135a240ef594490d2ff86a02df?fmt=png-alpha&wid=1200" class="w-full h-full object-cover">
+                        </div>
+                        <div class="w-full lg:w-1/2 space-y-6" data-aos="fade-left">
+                            <div class="w-12 h-12 rounded-full bg-brand-500/10 flex items-center justify-center text-brand-500 border border-brand-500/20">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.52 19c.64-2.2 1.84-3 3.22-3h6.52c1.38 0 2.58.8 3.22 3M15 11h.01M9 11h.01M12 21a9 9 0 100-18 9 9 0 000 18z"></path></svg>
+                            </div>
+                            <h3 class="font-display text-3xl font-bold text-white">Adaptive Active Noise Cancellation</h3>
+                            <p class="text-gray-400 text-lg leading-relaxed">
+                                Our proprietary algorithms sample environmental noise 4,000 times per second, generating an inverted acoustic wave that neutralizes disruptions before they reach your ear. Absolute silence, anywhere.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 2: Image Right, Text Left -->
+                    <div class="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20">
+                        <div class="w-full lg:w-1/2 relative aspect-square md:aspect-video lg:aspect-square rounded-3xl overflow-hidden border border-white/5" data-aos="fade-left">
+                            <img src="https://cdn.uc.assets.prezly.com/4e7b5fe8-097d-4866-b300-86959148f43d/-/format/auto/ucrIaVsaf" class="w-full h-full object-cover">
+                        </div>
+                        <div class="w-full lg:w-1/2 space-y-6" data-aos="fade-right">
+                            <div class="w-12 h-12 rounded-full bg-brand-500/10 flex items-center justify-center text-brand-500 border border-brand-500/20">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"></path></svg>
+                            </div>
+                            <h3 class="font-display text-3xl font-bold text-white">Immersive Spatial Audio</h3>
+                            <p class="text-gray-400 text-lg leading-relaxed">
+                                Break free from two channels. Built-in gyroscopes track head movement in real-time to anchor sound in a 3D acoustic space. It feels less like listening to music, and more like standing in the studio.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 3: Image Left, Text Right -->
+                    <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                        <div class="w-full lg:w-1/2 relative aspect-square md:aspect-video lg:aspect-square rounded-3xl overflow-hidden border border-white/5" data-aos="fade-right">
+                            <img src="https://www.sony.hu/image/94101fcc4f07476f823d060b0a188f23?fmt=png-alpha&wid=1200" class="w-full h-full object-cover">
+                        </div>
+                        <div class="w-full lg:w-1/2 space-y-6" data-aos="fade-left">
+                            <div class="w-12 h-12 rounded-full bg-brand-500/10 flex items-center justify-center text-brand-500 border border-brand-500/20">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+                            </div>
+                            <h3 class="font-display text-3xl font-bold text-white">Premium Memory Foam Comfort</h3>
+                            <p class="text-gray-400 text-lg leading-relaxed">
+                                Encased in breathable, sustainably sourced vegan leather, our high-density memory foam earcups distribute clamping force evenly. At just 250g, you'll forget you're wearing them during 40-hour listening sessions.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Gallery Section -->
+            <section id="gallery" class="py-24 bg-dark-950">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-16" data-aos="fade-up">
+                        <h2 class="font-display text-4xl font-bold text-white mb-4">Design in Motion</h2>
+                    </div>
+                    
+                    <!-- Masonry Grid Layout -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-[250px]">
+                        <!-- Large Feature Image -->
+                        <div class="relative rounded-2xl overflow-hidden border border-white/5 lg:col-span-2 lg:row-span-2 group" data-aos="fade-up">
+                            <img src="https://helios-i.mashable.com/imagery/articles/01lATJbeEJzsazyiWdDVgod/hero-image.fill.size_1248x702.v1775487890.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <!-- Standard Image -->
+                        <div class="relative rounded-2xl overflow-hidden border border-white/5 group" data-aos="fade-up" data-aos-delay="100">
+                            <img src="https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc3/Sony_WH-1000XM580.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <!-- Tall Image -->
+                        <div class="relative rounded-2xl overflow-hidden border border-white/5 lg:row-span-2 group" data-aos="fade-up" data-aos-delay="200">
+                            <img src="https://www.optionstheedge.com/sites/default/files/field/featured-image/2022/sony_1000mx5.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <!-- Standard Image -->
+                        <div class="relative rounded-2xl overflow-hidden border border-white/5 md:col-span-2 lg:col-span-1 group" data-aos="fade-up" data-aos-delay="300">
+                            <img src="https://static0.anpoimages.com/wordpress/wp-content/uploads/2022/11/sony-wh-1000xm5-on-ground-1.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technical Specifications -->
+            <section id="specs" class="py-24 bg-dark-900 border-y border-white/5">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="flex flex-col lg:flex-row justify-between items-start gap-16">
+                        <div class="lg:w-1/3" data-aos="fade-right">
+                            <h2 class="font-display text-4xl font-bold text-white mb-6">Uncompromised<br>Specifications</h2>
+                            <p class="text-gray-400 mb-8">Built with aerospace-grade materials and next-generation acoustic hardware.</p>
+                            <button onclick="navigateTo('signup')" class="text-brand-500 font-semibold hover:text-white transition-colors flex items-center group">
+                                Secure your Macklor M1
+                                <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </button>
+                        </div>
+                        
+                        <div class="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-8" data-aos="fade-left">
+                            <div class="border-b border-white/10 pb-4">
+                                <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Weight</p>
+                                <p class="text-xl font-medium text-white">250g (Ultra-Lightweight)</p>
+                            </div>
+                            <div class="border-b border-white/10 pb-4">
+                                <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Connectivity</p>
+                                <p class="text-xl font-medium text-white">Bluetooth 5.3 & USB-C Audio</p>
+                            </div>
+                            <div class="border-b border-white/10 pb-4">
+                                <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Battery Life</p>
+                                <p class="text-xl font-medium text-white">40 Hours (ANC On)</p>
+                            </div>
+                            <div class="border-b border-white/10 pb-4">
+                                <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Price</p>
+                                <p class="text-xl font-medium text-white">$299 MSRP</p>
+                            </div>
+                            <div class="border-b border-white/10 pb-4 sm:col-span-2">
+                                <p class="text-xs text-gray-500 uppercase tracking-wider mb-2">Available Finishes</p>
+                                <div class="flex items-center gap-6">
+                                    <span class="text-lg font-medium text-white flex items-center gap-3">
+                                        <span class="w-6 h-6 rounded-full bg-black border border-white/20 shadow-inner"></span> Obsidian Black
+                                    </span>
+                                    <span class="text-lg font-medium text-white flex items-center gap-3">
+                                        <span class="w-6 h-6 rounded-full bg-slate-100 border border-gray-400 shadow-inner"></span> Pearl White
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Reviews and FAQ -->
+            <section class="py-24 bg-dark-950">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    
+                    <!-- Testimonials -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
+                        <div class="bg-dark-900 p-8 rounded-2xl border border-white/5" data-aos="fade-up">
+                            <div class="text-brand-500 text-xl mb-4">★★★★★</div>
+                            <p class="text-gray-300 mb-6 italic">"The Macklor M1 completely redefines comfort. I wore them for a transatlantic flight and forgot they were there. The soundstage is remarkably wide."</p>
+                            <p class="text-sm font-bold text-white">AudioPhile Daily</p>
+                        </div>
+                        <div class="bg-dark-900 p-8 rounded-2xl border border-white/5" data-aos="fade-up" data-aos-delay="100">
+                            <div class="text-brand-500 text-xl mb-4">★★★★★</div>
+                            <p class="text-gray-300 mb-6 italic">"Bluetooth 5.3 connection is flawless, but it's the ANC that blew me away. It creates a vacuum of silence that lets the bass truly shine."</p>
+                            <p class="text-sm font-bold text-white">Tech Insider</p>
+                        </div>
+                        <div class="bg-dark-900 p-8 rounded-2xl border border-white/5" data-aos="fade-up" data-aos-delay="200">
+                            <div class="text-brand-500 text-xl mb-4">★★★★★</div>
+                            <p class="text-gray-300 mb-6 italic">"At $299, Macklor is aggressively undercutting the competition while delivering a product that feels and sounds significantly more expensive."</p>
+                            <p class="text-sm font-bold text-white">Sound & Vision</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ -->
+                    <div class="max-w-3xl mx-auto" data-aos="fade-up">
+                        <h2 class="font-display text-3xl font-bold text-center text-white mb-8">Frequently Asked Questions</h2>
+                        <div class="space-y-4">
+                            <details class="bg-dark-900 rounded-xl border border-white/5 group overflow-hidden">
+                                <summary class="flex justify-between items-center font-medium cursor-pointer p-6 text-white bg-dark-800/30 hover:bg-dark-800/50 transition-colors">
+                                    Can I use them while charging?
+                                    <span class="transition group-open:rotate-180 text-gray-500"><svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="20"><path d="M19 9l-7 7-7-7"></path></svg></span>
+                                </summary>
+                                <p class="text-gray-400 p-6 pt-2 leading-relaxed">Yes, the Macklor M1 supports high-res audio playback directly through the included USB-C cable, allowing you to listen losslessly while the device charges.</p>
+                            </details>
+                            <details class="bg-dark-900 rounded-xl border border-white/5 group overflow-hidden">
+                                <summary class="flex justify-between items-center font-medium cursor-pointer p-6 text-white bg-dark-800/30 hover:bg-dark-800/50 transition-colors">
+                                    When will my pre-order ship?
+                                    <span class="transition group-open:rotate-180 text-gray-500"><svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="20"><path d="M19 9l-7 7-7-7"></path></svg></span>
+                                </summary>
+                                <p class="text-gray-400 p-6 pt-2 leading-relaxed">Initial waitlist members will secure a spot in our first manufacturing batch. We expect to begin fulfilling pre-orders in Q1 2027.</p>
+                            </details>
+                            <details class="bg-dark-900 rounded-xl border border-white/5 group overflow-hidden">
+                                <summary class="flex justify-between items-center font-medium cursor-pointer p-6 text-white bg-dark-800/30 hover:bg-dark-800/50 transition-colors">
+                                    Do they support multi-point connection?
+                                    <span class="transition group-open:rotate-180 text-gray-500"><svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="20"><path d="M19 9l-7 7-7-7"></path></svg></span>
+                                </summary>
+                                <p class="text-gray-400 p-6 pt-2 leading-relaxed">Absolutely. Thanks to Bluetooth 5.3, you can seamlessly connect to your laptop and smartphone simultaneously, auto-switching when a call comes in.</p>
+                            </details>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Enhanced Footer -->
+            <footer class="bg-black pt-20 pb-10 border-t border-white/10">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                        
+                        <!-- Brand & About -->
+                        <div class="col-span-1 md:col-span-2 lg:col-span-1">
+                            <div class="flex items-center mb-6">
+                                <div class="w-6 h-6 rounded bg-brand-500 mr-2"></div>
+                                <span class="font-display font-bold text-2xl text-white">Macklor</span>
+                            </div>
+                            <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                                We believe sound is the ultimate canvas. Macklor is dedicated to engineering acoustic hardware that faithfully reproduces the artist's original vision.
+                            </p>
+                        </div>
+
+                        <!-- Contact Info -->
+                        <div>
+                            <h3 class="text-white font-semibold mb-4 uppercase tracking-wider text-xs">Contact Us</h3>
+                            <ul class="space-y-3 text-sm text-gray-400">
+                                <li class="flex items-start">
+                                    123 Sonic Avenue,<br>Tech District, NY 10001
+                                </li>
+                                <li class="flex items-center">
+                                    +1 800-555-0199
+                                </li>
+                                <li class="flex items-center">
+                                    support@macklor.com
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Quick Links -->
+                        <div>
+                            <h3 class="text-white font-semibold mb-4 uppercase tracking-wider text-xs">Explore</h3>
+                            <ul class="space-y-2 text-sm text-gray-400">
+                                <li><a href="#" class="hover:text-brand-500 transition-colors">Acoustic Engineering</a></li>
+                                <li><a href="#" class="hover:text-brand-500 transition-colors">Sustainability</a></li>
+                                <li><a href="#" class="hover:text-brand-500 transition-colors">Press & Media</a></li>
+                                <li><a href="#" class="hover:text-brand-500 transition-colors">Careers</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Legal -->
+                        <div>
+                            <h3 class="text-white font-semibold mb-4 uppercase tracking-wider text-xs">Legal</h3>
+                            <ul class="space-y-2 text-sm text-gray-400">
+                                <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                                <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+                                <li><a href="#" class="hover:text-white transition-colors">Warranty Info</a></li>
+                                <li><a href="#" class="hover:text-white transition-colors">Return Policy</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    
+                    <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600">
+                        <p>&copy; 2026 Macklor Audio Inc. All rights reserved.</p>
+                        <p class="mt-2 md:mt-0">Designed for perfection.</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- VIEW 2: WAITLIST / SIGN UP PAGE            -->
+        <!-- ========================================== -->
+        <div id="view-signup" class="view-transition view-hidden w-full min-h-screen flex items-center justify-center py-20 px-4 sm:px-6 lg:px-8 relative bg-dark-950">
+            
+            <div class="max-w-4xl w-full bg-dark-900 rounded-3xl shadow-[0_0_50px_rgba(0,0,0,0.5)] border border-white/5 overflow-hidden flex flex-col md:flex-row relative z-10">
+                
+                <!-- Information Side -->
+                <div class="w-full md:w-5/12 bg-dark-800 p-10 flex flex-col justify-between border-r border-white/5">
+                    <div>
+                        <button onclick="navigateTo('home')" class="inline-flex items-center text-sm font-medium text-gray-400 hover:text-white mb-10 transition-colors group">
+                            <svg class="w-5 h-5 mr-2 transform group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                            Back to Home
+                        </button>
+                        <h2 class="font-display text-3xl font-bold text-white mb-4">Join the Waitlist</h2>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-8">
+                            Be among the first to experience the Macklor M1. Waitlist members receive guaranteed allocation from batch #01, exclusive engineering updates, and early access pricing.
+                        </p>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center text-sm text-gray-300">
+                            <svg class="w-5 h-5 mr-3 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            No deposit required today
+                        </div>
+                        <div class="flex items-center text-sm text-gray-300">
+                            <svg class="w-5 h-5 mr-3 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Cancel your reservation anytime
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web3Forms Side -->
+                <div class="w-full md:w-7/12 p-10">
+                    <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+                        
+                        <!-- REQUIRED Web3Forms Access Key -->
+                        <input type="hidden" name="access_key" value="14f8ccfa-8147-4dd8-bc53-de587186ee6f">
+                        
+                        <!-- Honeypot for Spam Protection -->
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                        
+                        <!-- Subject override for email -->
+                        <input type="hidden" name="subject" value="New Macklor M1 Waitlist Signup">
+
+                        <div>
+                            <label for="name" class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Full Name</label>
+                            <input type="text" name="name" id="name" required placeholder="Enter your name"
+                                class="w-full bg-dark-950 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Email Address</label>
+                            <input type="email" name="email" id="email" required placeholder="you@example.com"
+                                class="w-full bg-dark-950 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors">
+                        </div>
+
+                        <div>
+                            <label for="phone" class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Phone Number</label>
+                            <input type="tel" name="phone" id="phone" placeholder="+1 (555) 000-0000"
+                                class="w-full bg-dark-950 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors">
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Message (Optional)</label>
+                            <textarea id="message" name="message" rows="3" placeholder="Color preference or questions?"
+                                class="w-full bg-dark-950 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors resize-none"></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full py-4 rounded-lg bg-white text-dark-950 font-bold tracking-wide hover:bg-gray-200 focus:outline-none transition-colors mt-4">
+                            Submit Registration
+                        </button>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+
+    </main>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize Scroll Animations
+        AOS.init({
+            once: true,
+            offset: 50,
+            duration: 800,
+            easing: 'ease-out-cubic',
+        });
+
+        // SPA Navigation Function
+        function navigateTo(view) {
+            const homeView = document.getElementById('view-home');
+            const signupView = document.getElementById('view-signup');
+            const navLinks = document.getElementById('nav-links');
+            const navCta = document.getElementById('nav-cta');
+
+            if (view === 'signup') {
+                homeView.classList.replace('view-visible', 'view-hidden');
+                setTimeout(() => {
+                    signupView.classList.replace('view-hidden', 'view-visible');
+                    window.scrollTo(0, 0);
+                }, 400);
+                navLinks.classList.add('opacity-0', 'pointer-events-none');
+                navCta.classList.add('opacity-0', 'pointer-events-none');
+            } else {
+                signupView.classList.replace('view-visible', 'view-hidden');
+                setTimeout(() => {
+                    homeView.classList.replace('view-hidden', 'view-visible');
+                    window.scrollTo(0, 0);
+                }, 400);
+                navLinks.classList.remove('opacity-0', 'pointer-events-none');
+                navCta.classList.remove('opacity-0', 'pointer-events-none');
+            }
+        }
+    </script>
+</body>
+</html>
